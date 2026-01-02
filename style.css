@@ -1,0 +1,56 @@
+/* Reset some defaults */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  background-color: #333;
+  padding: 10px;
+}
+nav ul li {
+  margin-right: 20px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section with background image */
+.hero {
+  background-image: url('images/industrial-building.jpg'); /* Tesla-style industrial photo */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero .logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* About Us page */
+.about {
+  padding: 50px;
+  text-align: center;
+}
+.about .team-member {
+  display: inline-block;
+  margin-top: 20px;
+}
+.about .headshot {
+  width: 200px;
+  border-radius: 50%;
+}
