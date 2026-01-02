@@ -1,4 +1,4 @@
-/* Reset some defaults */
+/* Reset defaults */
 body, html {
   margin: 0;
   padding: 0;
@@ -11,21 +11,24 @@ nav ul {
   display: flex;
   background-color: #333;
   padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 nav ul li {
-  margin-right: 20px;
+  margin: 5px 15px;
 }
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section with background image */
+/* Hero Section */
 .hero {
-  background-image: url('images/industrial-building.jpg'); /* Tesla-style industrial photo */
+  background-image: url('images/industrial-building.jpg');
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -35,15 +38,17 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 0 20px;
 }
 .hero .logo {
   width: 200px;
+  max-width: 50%;
   margin-bottom: 20px;
 }
 
 /* About Us page */
 .about {
-  padding: 50px;
+  padding: 50px 20px;
   text-align: center;
 }
 .about .team-member {
@@ -52,5 +57,44 @@ nav ul li a:hover {
 }
 .about .headshot {
   width: 200px;
+  max-width: 80%;
   border-radius: 50%;
+}
+
+/* Contact page */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.contact input, .contact textarea {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+.contact button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.contact button:hover {
+  background-color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }
