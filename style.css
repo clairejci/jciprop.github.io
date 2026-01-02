@@ -98,3 +98,35 @@ nav ul li a:hover {
     flex-direction: column;
   }
 }
+
+/* Services Page */
+.services {
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.service-item {
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: left;
+}
+
+.service-item summary {
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+.service-item ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.service-item li {
+  margin-bottom: 8px;
+}
