@@ -187,8 +187,12 @@ nav a {
 
 .team-member img {
   width: 180px;
+  height: 180px;
+  object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
+}
+
 }
 
 .team-member h2 {
