@@ -106,11 +106,18 @@ nav a {
   justify-content: space-between;
 }
 
+/* NAVIGATION LOGO STYLING */
 .logo {
-  height: 50px;
+  height: 70px;  /* make it larger */
   width: auto;
-}nav a {
-  position: relative;
+  transition: all 0.3s ease; /* smooth scaling if needed */
+}
+
+/* Optional: slightly larger on desktop vs mobile */
+@media (max-width: 768px) {
+  .logo {
+    height: 50px; /* smaller on mobile so it doesn’t dominate */
+  }
 }
 
 nav a::after {
