@@ -167,6 +167,12 @@ nav a:hover::after { width: 100%; }
 /* =========================
    SERVICES PAGE
    ========================= */
+/* ONLY APPLY SERVICES BACKGROUND ON SERVICES PAGE */
+body.services-page .services {
+  height: 85vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url("images/industrial-building.jpg") center / cover no-repeat;
+}
 
 .services {
   padding: 70px 20px;
