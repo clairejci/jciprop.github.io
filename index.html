@@ -16,6 +16,22 @@
 <div id="logo-intro">
   <img src="images/logo.png" alt="JCI Properties Logo">
 </div>
+  <script>
+  (function () {
+    const intro = document.getElementById("logo-intro");
+
+    if (sessionStorage.getItem("introShown")) {
+      intro.style.display = "none";
+      return;
+    }
+
+    sessionStorage.setItem("introShown", "true");
+
+    setTimeout(function () {
+      intro.style.display = "none";
+    }, 2200); // MUST match the animation duration
+  })();
+</script>
 
 <body>
 
