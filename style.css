@@ -38,6 +38,12 @@
     transform: scale(1);
   }
 }
+@media (max-width: 768px) {
+  #logo-intro img {
+    width: 180px;
+  }
+}
+
 
 /* =========================
    GLOBAL STYLES
