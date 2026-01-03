@@ -21,42 +21,19 @@
 }
 
 @keyframes logoFade {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  30% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-}
-@media (max-width: 768px) {
-  #logo-intro img {
-    width: 180px;
-  }
+  0% { opacity: 0; transform: scale(0.8); }
+  30% { opacity: 1; transform: scale(1.1); }
+  60% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1); }
 }
 
+@media (max-width: 768px) {
+  #logo-intro img { width: 180px; }
+}
 
 /* =========================
    GLOBAL STYLES
    ========================= */
-/* Make all images responsive */
-img {
- img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-}
 
 * {
   box-sizing: border-box;
@@ -68,6 +45,13 @@ body {
   color: #222;
   line-height: 1.6;
   background-color: #ffffff;
+}
+
+/* Make all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -99,7 +83,9 @@ nav ul {
 
 nav a {
   font-weight: 500;
+  position: relative;
 }
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -108,16 +94,13 @@ nav a {
 
 /* NAVIGATION LOGO STYLING */
 .logo {
-  height: 70px;  /* make it larger */
+  height: 70px;
   width: auto;
-  transition: all 0.3s ease; /* smooth scaling if needed */
+  transition: all 0.3s ease;
 }
 
-/* Optional: slightly larger on desktop vs mobile */
 @media (max-width: 768px) {
-  .logo {
-    height: 50px; /* smaller on mobile so it doesn’t dominate */
-  }
+  .logo { height: 50px; }
 }
 
 nav a::after {
@@ -131,9 +114,7 @@ nav a::after {
   transition: width 0.3s ease;
 }
 
-nav a:hover::after {
-  width: 100%;
-}
+nav a:hover::after { width: 100%; }
 
 /* =========================
    HERO / HOME PAGE
@@ -141,30 +122,19 @@ nav a:hover::after {
 
 .hero {
   height: 85vh;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45)
-    ),
-    url("images/austin.jpg") center / cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url("images/austin.jpg") center / cover no-repeat;
   display: flex;
   align-items: center;
   padding: 0 50px;
   color: white;
 }
 
-.hero-content {
-  max-width: 600px;
-}
+.hero-content { max-width: 600px; }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
+.hero h1 { font-size: 3rem; margin-bottom: 15px; }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
+.hero p { font-size: 1.2rem; margin-bottom: 25px; }
 
 /* =========================
    CTA BUTTON
@@ -180,9 +150,7 @@ nav a:hover::after {
   transition: all 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #f1f1f1;
-}
+.cta-button:hover { background-color: #f1f1f1; }
 
 /* =========================
    SERVICES PAGE
@@ -193,13 +161,11 @@ nav a:hover::after {
   max-width: 900px;
   margin: auto;
 }
+
 .services {
   height: 85vh;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45)
-    ),
-    url("images/industrial-building.jpg") center / cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url("images/industrial-building.jpg") center / cover no-repeat;
   display: flex;
   align-items: center;
   padding: 0 50px;
@@ -225,9 +191,7 @@ nav a:hover::after {
   transition: background 0.3s ease;
 }
 
-.service-item:hover {
-  background: #eeeeee;
-}
+.service-item:hover { background: #eeeeee; }
 
 .service-item summary {
   font-size: 1.25rem;
@@ -235,15 +199,9 @@ nav a:hover::after {
   cursor: pointer;
 }
 
-.service-item ul {
-  margin-top: 15px;
-  padding-left: 20px;
-}
+.service-item ul { margin-top: 15px; padding-left: 20px; }
 
-.service-item li {
-  margin-bottom: 10px;
-  color: #444;
-}
+.service-item li { margin-bottom: 10px; color: #444; }
 
 /* =========================
    ABOUT PAGE
@@ -266,6 +224,7 @@ nav a:hover::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
+  justify-items: center;
 }
 
 .team-member img {
@@ -273,24 +232,14 @@ nav a:hover::after {
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  margin: 0 auto 15px;
+  margin-bottom: 15px;
 }
 
-}
+.team-member h2 { margin-bottom: 5px; }
 
-.team-member h2 {
-  margin-bottom: 5px;
-}
+.team-member h4 { margin-top: 0; font-weight: 500; color: #777; }
 
-.team-member h4 {
-  margin-top: 0;
-  font-weight: 500;
-  color: #777;
-}
-
-.team-member p {
-  color: #444;
-}
+.team-member p { color: #444; margin-bottom: 15px; }
 
 /* =========================
    CONTACT PAGE
@@ -314,33 +263,28 @@ nav a:hover::after {
   margin-top: 80px;
 }
 
-.work-with-us h2 {
-  margin-bottom: 10px;
-}
+.work-with-us h2 { margin-bottom: 10px; }
 
-.work-with-us p {
-  color: #555;
-  margin-bottom: 25px;
-}
+.work-with-us p { color: #555; margin-bottom: 25px; }
 
 /* =========================
    FADE-IN ANIMATION
    ========================= */
 
 .fade-in {
+  opacity: 0;
   animation: fadeInUp 1s ease forwards;
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+
+/* =========================
+   FOOTER
+   ========================= */
+
 .footer {
   padding: 30px;
   text-align: center;
@@ -348,48 +292,28 @@ nav a:hover::after {
   border-top: 1px solid #eee;
   margin-top: 60px;
 }
+
 /* =========================
    MOBILE POLISH
    ========================= */
 
 @media (max-width: 768px) {
 
-  nav ul {
-    gap: 18px;
-  }
+  nav ul { gap: 18px; }
 
-  nav a {
-    padding: 10px 0;
-    display: inline-block;
-  }
+  nav a { padding: 10px 0; display: inline-block; }
 
-  .hero {
-    padding: 0 25px;
-    height: 75vh;
-  }
+  .hero { padding: 0 25px; height: 75vh; }
 
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+  .hero h1 { font-size: 2.2rem; }
 
-  .hero p {
-    font-size: 1.05rem;
-  }
+  .hero p { font-size: 1.05rem; }
 
   .services,
   .about,
-  .contact {
-    padding: 60px 20px;
-  }
+  .contact { padding: 60px 20px; }
 
-  .cta-button {
-    padding: 16px 30px;
-  }
+  .cta-button { padding: 16px 30px; }
 
-  .team-member img {
-    width: 160px;
-    height: 160px;
-  }
+  .team-member img { width: 160px; height: 160px; }
 }
-
-
