@@ -2,53 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us - JCI Prop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | JCI Properties</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <section class="work-with-us fade-in">
-  <h2>Work With Us</h2>
-  <p>
-    We believe the best results come from trusted relationships and thoughtful strategy.
-    Let’s start the conversation.
-  </p>
-  <a href="contact.html" class="cta-button">Contact Us</a>
-</section>
-  <nav>
-  <div class="nav-container">
-    <a href="index.html">
-      <img src="images/logo.png" alt="JCI Properties Logo" class="logo">
-    </a>
-
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
 <body>
-  <!-- Navigation -->
+
+  <!-- NAVIGATION -->
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="images/logo.png" alt="JCI Properties Logo" class="logo">
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <section class="contact">
+  <!-- WORK WITH US CTA -->
+  <section class="work-with-us fade-in">
+    <h2>Work With Us</h2>
+    <p>
+      We believe the best results come from trusted relationships and thoughtful strategy.
+      Let’s start the conversation.
+    </p>
+    <a href="contact.html" class="cta-button">Contact Us</a>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact fade-in">
     <h1>Contact Us</h1>
     <p>Whether you’re evaluating a transaction, planning for future growth, or simply exploring options, we’re happy to start the conversation.</p>
-<p>Email: claire@jciprop.com</p>
+    <p>Email: <a href="mailto:claire@jciprop.com">claire@jciprop.com</a></p>
     <p>We respond to all inquiries within one business day.</p>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="_replyto" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit" class="cta-button">Send Message</button>
     </form>
   </section>
+
+  <!-- Optional Footer -->
+  <footer class="footer fade-in">
+    &copy; 2026 JCI Properties. All rights reserved.
+  </footer>
+
 </body>
 </html>
