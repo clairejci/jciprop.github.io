@@ -73,9 +73,22 @@
     <a href="contact.html" class="cta-button">Contact Us</a>
   </section>
 <script>
-  setTimeout(function () {
-    document.getElementById("logo-intro").style.display = "none";
-  }, 1400); // must match the animation duration
+  (function () {
+    const intro = document.getElementById("logo-intro");
+
+    // If the intro has already been shown this session, skip it
+    if (sessionStorage.getItem("introShown")) {
+      intro.style.display = "none";
+      return;
+    }
+
+    // Otherwise, show intro and mark as shown
+    sessionStorage.setItem("introShown", "true");
+
+    setTimeout(function () {
+      intro.style.display = "none";
+    }, 1400); // must match animation duration
+  })();
 </script>
 
 </body>
