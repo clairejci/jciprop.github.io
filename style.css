@@ -272,95 +272,100 @@ nav a:hover::after { width: 100%; }
 }
 
 /* =========================
-   ABOUT / TEAM SECTION (PREMIUM)
+   ABOUT US SECTION POLISH
    ========================= */
 
-/* Headshots (About page) */
-.headshot {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 25%;
-  border: 4px solid #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+/* Centered container with border + soft shadow */
+.about-hero, .team-container {
+  max-width: 900px;
+  margin: 0 auto; /* centers horizontally */
+  padding: 40px 30px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-/* Claire: image is more “portrait”, so crop higher */
-.headshot--claire {
-  object-position: center 15%;
+/* Improve spacing between sections */
+.about-hero {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-/* Hover accent ring (matches your premium look) */
-.team-member:hover .headshot {
-  border-color: #b08d57;
-  box-shadow: 0 6px 16px rgba(176, 141, 87, 0.35);
+/* Typography */
+.about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .headshot {
-    width: 160px;
-    height: 160px;
-  }
+.about-hero p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #444;
 }
 
+/* Wrap team members in a separate container */
+.team-container {
+  margin-bottom: 60px;
+}
+
+/* TEAM MEMBER CARDS */
 .team {
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  margin-top: 50px;
+  gap: 50px;
 }
 
 .team-member {
   display: flex;
   align-items: center;
   gap: 40px;
-  background: #f9f9f9;
-  padding: 30px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 25px 25px;
+  border-radius: 10px;
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.04);
   transition: transform 0.3s ease;
 }
 
 .team-member:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
-/* PHOTO WRAPPER */
+/* Photo */
 .team-photo img {
   width: 180px;
   height: 180px;
-  border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #ffffff;
+  border-radius: 50%;
+  border: 4px solid #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ACCENT BORDER ON HOVER */
 .team-member:hover .team-photo img {
-  border-color: #b08d57; /* soft bronze accent */
-  box-shadow: 0 6px 16px rgba(176, 141, 87, 0.35);
+  border-color: #b08d57; /* same accent effect */
+  box-shadow: 0 6px 18px rgba(176,141,87,0.35);
 }
 
-/* TEXT */
+/* Inner text styles */
 .team-info h2 {
-  margin-bottom: 5px;
-  font-size: 1.8rem;
+  font-size: 1.75rem;
+  margin-bottom: 8px;
 }
 
 .team-info h4 {
-  margin-top: 0;
-  font-weight: 500;
-  color: #555;
+  font-size: 1.05rem;
+  color: #666;
   margin-bottom: 15px;
 }
 
 .team-info p {
   color: #444;
-  line-height: 1.6;
-  margin-bottom: 12px;
+  line-height: 1.65;
+  margin-bottom: 10px;
 }
 
 /* MOBILE STACKING */
@@ -369,18 +374,9 @@ nav a:hover::after { width: 100%; }
     flex-direction: column;
     text-align: center;
   }
-
   .team-photo img {
     width: 160px;
     height: 160px;
-  }
-
-  .team-info h2 {
-    font-size: 1.5rem;
-  }
-
-  .team-info h4 {
-    font-size: 1rem;
   }
 }
 
