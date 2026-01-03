@@ -257,7 +257,14 @@ nav a:hover::after { width: 100%; }
 /* =========================
    ABOUT PAGE
    ========================= */
+/* =========================
+   PAGE BACKGROUND (NAVY)
+   ========================= */
 
+body {
+  background-color: #0a1e40; /* navy brand color */
+  color: #222;
+}
 .about {
   padding: 70px 20px;
   max-width: 1000px;
