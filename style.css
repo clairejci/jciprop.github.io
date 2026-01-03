@@ -228,6 +228,36 @@ nav a:hover::after { width: 100%; }
    ABOUT / TEAM SECTION (PREMIUM)
    ========================= */
 
+/* Headshots (About page) */
+.headshot {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Claire: image is more “portrait”, so crop higher */
+.headshot--claire {
+  object-position: center 15%;
+}
+
+/* Hover accent ring (matches your premium look) */
+.team-member:hover .headshot {
+  border-color: #b08d57;
+  box-shadow: 0 6px 16px rgba(176, 141, 87, 0.35);
+}
+
+@media (max-width: 768px) {
+  .headshot {
+    width: 160px;
+    height: 160px;
+  }
+}
+
 .team {
   display: flex;
   flex-direction: column;
