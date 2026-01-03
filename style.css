@@ -139,6 +139,10 @@ nav a:hover::after { width: 100%; }
   margin-bottom: 25px;
   color: #fff; /* white text for contrast */
 }
+.about-hero {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 60px;
+}
 
 /* =========================
    CTA BUTTON
