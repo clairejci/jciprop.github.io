@@ -126,7 +126,7 @@ nav a:hover::after { width: 100%; }
 .hero {
   height: 85vh;
   background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-              url("images/austin.jpg") center / cover no-repeat;
+              url("images/austin-hero.jpg") center / cover no-repeat;
   display: flex;
   align-items: center;
   padding: 0 50px;
