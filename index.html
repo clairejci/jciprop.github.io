@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JCI Properties</title>
 
   <!-- Google Font -->
@@ -12,44 +13,29 @@
   <!-- Main Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
-<!-- LOGO INTRO ANIMATION -->
-<div id="logo-intro">
-  <img src="images/logo.png" alt="JCI Properties Logo">
-</div>
-  <script>
-  (function () {
-    const intro = document.getElementById("logo-intro");
-
-    if (sessionStorage.getItem("introShown")) {
-      intro.style.display = "none";
-      return;
-    }
-
-    sessionStorage.setItem("introShown", "true");
-
-    setTimeout(function () {
-      intro.style.display = "none";
-    }, 2200); // MUST match the animation duration
-  })();
-</script>
 
 <body>
 
-  <!-- NAVIGATION -->
-<nav>
-  <div class="nav-container">
-    <a href="index.html">
-      <img src="images/logo.png" alt="JCI Properties Logo" class="logo">
-    </a>
-
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <!-- LOGO INTRO ANIMATION (must be inside body) -->
+  <div id="logo-intro">
+    <img src="images/logo.png" alt="JCI Properties Logo">
   </div>
-</nav>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="images/logo.png" alt="JCI Properties Logo" class="logo">
+      </a>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- HERO SECTION -->
   <section class="hero fade-in">
@@ -61,17 +47,19 @@
       <a href="contact.html" class="cta-button">Work With Us</a>
     </div>
   </section>
-  <section class="services fade-in">
-  <h1>What Clients Value</h1>
-  <ul>
-    <li>Clear, strategic guidance</li>
-    <li>Market-driven decision making</li>
-    <li>Long-term relationship focus</li>
-    <li>Responsive, hands-on service</li>
-  </ul>
-</section>
 
-  <!-- INTRO SECTION -->
+  <!-- VALUE SECTION -->
+  <section class="services fade-in">
+    <h1>What Clients Value</h1>
+    <ul>
+      <li>Clear, strategic guidance</li>
+      <li>Market-driven decision making</li>
+      <li>Long-term relationship focus</li>
+      <li>Responsive, hands-on service</li>
+    </ul>
+  </section>
+
+  <!-- WHAT WE DO -->
   <section class="services fade-in">
     <h1>What We Do</h1>
     <p>
@@ -88,27 +76,30 @@
     </p>
     <a href="contact.html" class="cta-button">Contact Us</a>
   </section>
-<script>
-  (function () {
-    const intro = document.getElementById("logo-intro");
 
-    // If the intro has already been shown this session, skip it
-    if (sessionStorage.getItem("introShown")) {
-      intro.style.display = "none";
-      return;
-    }
+  <!-- FOOTER (must be inside body) -->
+  <footer class="footer">
+    <p>© 2026 JCI Properties. All rights reserved.</p>
+  </footer>
 
-    // Otherwise, show intro and mark as shown
-    sessionStorage.setItem("introShown", "true");
+  <!-- INTRO SCRIPT (only one, placed at end of body) -->
+  <script>
+    (function () {
+      const intro = document.getElementById("logo-intro");
+      if (!intro) return;
 
-    setTimeout(function () {
-      intro.style.display = "none";
-    }, 1400); // must match animation duration
-  })();
-</script>
+      if (sessionStorage.getItem("introShown")) {
+        intro.style.display = "none";
+        return;
+      }
+
+      sessionStorage.setItem("introShown", "true");
+
+      setTimeout(function () {
+        intro.style.display = "none";
+      }, 2200); // match CSS animation duration
+    })();
+  </script>
 
 </body>
-  <footer class="footer">
-  <p>© 2026 JCI Properties. All rights reserved.</p>
-</footer>
 </html>
