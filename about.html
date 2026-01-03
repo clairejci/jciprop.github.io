@@ -24,11 +24,11 @@
   </nav>
 
   <!-- ABOUT HERO -->
-  <section class="about-hero">
+  <section class="about-hero fade-in">
     <div class="container">
-      <h1>About Us</h1>
-      <p class="about-intro">
-        JCI Properties was founded on the belief that the best real estate outcomes come from strong relationships, clear communication, and thoughtful strategy.
+      <h1 class="fade-in">About Us</h1>
+      <p class="about-intro fade-in">
+        JCI Properties was founded on the belief that the best real estate outcomes come from strong relationships, clear communication, and thoughtful strategy.  
         We focus on industrial and office real estate, working closely with our clients to understand their goals and guide decisions that support long-term success.
       </p>
     </div>
@@ -37,51 +37,51 @@
   <!-- TEAM SECTION -->
   <section class="team container">
     <!-- Jordan Walker -->
-    <div class="team-member">
-      <img src="images/jordan-walker.jpg" alt="Jordan Walker">
-      <h2>Jordan Walker</h2>
-      <h4>Founder & Managing Partner</h4>
-      <p>
-        Jordan leads JCI Properties with nearly 20 years of commercial real estate experience across Texas. He specializes in industrial and office advisory, partnering with clients to navigate complex transactions with clarity and confidence.
-      </p>
-      <p>
-        Prior to entering commercial real estate, Jordan served as a Legislative Aide in the Texas House of Representatives for Rep. Charlie Geren of Fort Worth. This shaped his relationship-driven approach to business and gave him firsthand exposure to leadership and policy in Texas.
-      </p>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:jordan@jciprop.com">jordan@jciprop.com</a>
-      </p>
+    <div class="team-member fade-in" style="animation-delay: 0.2s;">
+      <div class="team-photo">
+        <img src="images/jordan-walker.jpg" alt="Jordan Walker">
+      </div>
+      <div class="team-info">
+        <h2>Jordan Walker</h2>
+        <h4>Founder & Managing Partner</h4>
+        <p>
+          Jordan leads JCI Properties with nearly 20 years of commercial real estate experience across Texas. He specializes in industrial and office advisory, partnering with clients to navigate complex transactions with clarity and confidence.
+        </p>
+        <p>
+          Prior to entering commercial real estate, Jordan served as a Legislative Aide in the Texas House of Representatives for Rep. Charlie Geren of Fort Worth. This shaped his relationship-driven approach to business and gave him firsthand exposure to leadership and policy in Texas.
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:jordan@jciprop.com">jordan@jciprop.com</a>
+        </p>
+      </div>
     </div>
 
     <!-- Claire Wheeler -->
-    <div class="team-member">
-      <img src="images/claire-wheeler.jpg" alt="Claire Wheeler">
-      <h2>Claire Wheeler</h2>
-      <h4>Chief Marketing Officer</h4>
-      <p>
-        Claire oversees branding, marketing strategy, and client communications at JCI Properties. She brings a thoughtful, relationship-focused approach to how the firm connects with clients and presents its work.
-      </p>
-      <p>
-        Claire has built and executed marketing initiatives for companies ranging from startups to high-end brands, always emphasizing clarity, consistency, and authentic connection.
-      </p>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:claire@jciprop.com">claire@jciprop.com</a>
-      </p>
+    <div class="team-member fade-in" style="animation-delay: 0.4s;">
+      <div class="team-photo">
+        <img src="images/claire-wheeler.jpg" alt="Claire Wheeler">
+      </div>
+      <div class="team-info">
+        <h2>Claire Wheeler</h2>
+        <h4>Chief Marketing Officer</h4>
+        <p>
+          Claire oversees branding, marketing strategy, and client communications at JCI Properties. She brings a thoughtful, relationship-focused approach to how the firm connects with clients and presents its work.
+        </p>
+        <p>
+          Claire has built and executed marketing initiatives for companies ranging from startups to high-end brands, always emphasizing clarity, consistency, and authentic connection.
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:claire@jciprop.com">claire@jciprop.com</a>
+        </p>
+      </div>
     </div>
   </section>
 
-    <!-- Fade-in JS -->
-  <script>
-    // Apply fade-in to elements with .fade-in class and stagger if animation-delay is set
-    document.addEventListener("DOMContentLoaded", () => {
-      const fadeElements = document.querySelectorAll('.fade-in');
-      fadeElements.forEach(el => {
-        const delay = el.style.animationDelay || '0s';
-        el.style.animation = `fadeInUp 1s ease forwards ${delay}`;
-      });
-    });
-  </script>
+  <footer class="footer fade-in">
+    &copy; 2026 JCI Properties. All rights reserved.
+  </footer>
 
 </body>
 </html>
