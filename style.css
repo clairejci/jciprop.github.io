@@ -50,6 +50,16 @@ nav ul {
 nav a {
   font-weight: 500;
 }
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
 
 /* =========================
    HERO / HOME PAGE
