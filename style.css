@@ -243,6 +243,17 @@ nav a:hover::after { width: 100%; }
   display: none;
 }
 
+.service-item summary::after {
+  content: "+";
+  float: right;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-item[open] summary::after {
+  content: "–";
+}
+
 /* =========================
    ABOUT PAGE
    ========================= */
