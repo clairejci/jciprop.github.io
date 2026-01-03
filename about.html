@@ -71,5 +71,17 @@
     </div>
   </section>
 
+    <!-- Fade-in JS -->
+  <script>
+    // Apply fade-in to elements with .fade-in class and stagger if animation-delay is set
+    document.addEventListener("DOMContentLoaded", () => {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      fadeElements.forEach(el => {
+        const delay = el.style.animationDelay || '0s';
+        el.style.animation = `fadeInUp 1s ease forwards ${delay}`;
+      });
+    });
+  </script>
+
 </body>
 </html>
