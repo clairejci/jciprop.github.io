@@ -140,6 +140,7 @@ nav a:hover::after { width: 100%; }
   background-repeat: no-repeat;
 
   color: #ffffff;
+   outline: 5px solid red;
 }
 
 .hero-content {
