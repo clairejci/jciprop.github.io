@@ -467,6 +467,75 @@ body.services-page .services.hero-services h1 {
   border-top: 1px solid rgba(255,255,255,0.15);
   margin-top: 60px;
 }
+/* =========================
+   CLIENT LOGO MARQUEE (HOME)
+   ========================= */
+
+.client-marquee {
+  max-width: 1100px;
+  margin: 35px auto 10px;
+  padding: 18px 20px 10px;
+  color: rgba(255,255,255,0.92); /* readable on navy */
+}
+
+.client-marquee h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* The “window” */
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding: 16px 0;
+  position: relative;
+}
+
+/* The moving track */
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+  width: max-content;
+  animation: marqueeScroll 35s linear infinite;
+}
+
+/* Logos */
+.marquee-track img {
+  height: 34px;
+  width: auto;
+  opacity: 0.75;
+  filter: grayscale(100%);
+  transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+}
+
+.marquee-track img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: translateY(-1px);
+}
+
+/* Smooth infinite scroll */
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .marquee-track { gap: 32px; animation-duration: 28s; }
+  .marquee-track img { height: 28px; }
+}
 
 /* =========================
    MOBILE POLISH
