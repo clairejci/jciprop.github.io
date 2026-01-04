@@ -125,26 +125,24 @@ nav a:hover::after { width: 100%; }
    ========================= */
 
 .hero {
-  height: 85vh;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-              url("images/austin-hero.jpg") center / cover no-repeat;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   padding: 0 50px;
-  color: #fff;
-}
 
-.hero-content { max-width: 650px; }
+  /* Background image + dark overlay */
+  background-image:
+    linear-gradient(
+      rgba(10, 30, 64, 0.65),
+      rgba(10, 30, 64, 0.65)
+    ),
+    url("images/austin-hero.jpg");
 
-.hero h1 {
-  font-size: 3rem;
-  margin: 0 0 15px;
-}
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-.hero p {
-  font-size: 1.2rem;
-  margin: 0 0 25px;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* =========================
