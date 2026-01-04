@@ -130,25 +130,22 @@ nav a:hover::after { width: 100%; }
   align-items: center;
   padding: 0 50px;
 
-  /* Background image + dark overlay */
+  /* Background image + navy overlay */
   background-image:
-    linear-gradient(
-      rgba(10, 30, 64, 0.65),
-      rgba(10, 30, 64, 0.65)
-    ),
+    linear-gradient(rgba(10, 30, 64, 0.65), rgba(10, 30, 64, 0.65)),
     url("images/austin-hero.jpg");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-   .hero-content {
+  color: #ffffff;
+}
+
+.hero-content {
   max-width: 650px;
   position: relative;
   z-index: 2;
-}
-
-  color: #ffffff;
 }
 
 /* =========================
@@ -518,21 +515,7 @@ body.services-page .services.hero-services h1 {
 
   .contact button { align-self: stretch; text-align: center; }
 }
-/* Fix headshots getting stretched/squeezed */
-.team-photo {
-  width: 220px;         /* adjust size if you want */
-  height: 220px;
-  overflow: hidden;
-  border-radius: 12px;  /* optional, remove if you want sharp corners */
-  flex: 0 0 220px;      /* prevents the photo column from shrinking */
-}
 
-.team-photo .headshot {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    /* keeps proportions, crops nicely */
-  display: block;
-}
 .hero{
   background-size: cover;
   background-position: center;
