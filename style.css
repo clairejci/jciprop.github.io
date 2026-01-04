@@ -527,4 +527,18 @@ body.services-page .services.hero-services h1 {
   background-position: center;
   background-repeat: no-repeat;
 }
+/* White “bubble” cards for homepage sections */
+.info-card{
+  max-width: 980px;
+  margin: 36px auto;
+  padding: 44px 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.info-card h2{
+  margin-top: 0;
+}
+
 
