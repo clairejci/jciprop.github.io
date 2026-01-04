@@ -522,4 +522,9 @@ body.services-page .services.hero-services h1 {
   object-fit: cover;    /* keeps proportions, crops nicely */
   display: block;
 }
+.hero{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
