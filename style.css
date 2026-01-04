@@ -142,6 +142,12 @@ nav a:hover::after { width: 100%; }
   background-position: center;
   background-repeat: no-repeat;
 
+   .hero-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
   color: #ffffff;
 }
 
