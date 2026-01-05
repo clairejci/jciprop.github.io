@@ -82,7 +82,7 @@ a:hover { color: #555; }
 }
 
 /* =========================
-   NAVIGATION
+   NAVIGATION (CLEAN + RESPONSIVE)
    ========================= */
 
 nav {
@@ -95,63 +95,60 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.nav-cta{
-  margin-left: 18px;
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: #0a1e40; /* navy */
-  color: #fff;
-  font-weight: 600;
-  border: 1px solid rgba(10,30,64,0.25);
-  transition: transform .2s ease, background .2s ease;
-}
-.nav-cta{
-  ...
-}
-.nav-cta:hover{
-  ...
-}
-/* Tenant Request link (subtle, not button-like) */
-.tenant-link{
-  margin-left: 18px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #446389;          /* your brand navy */
-  background: transparent; /* ensures it doesn't look like a button */
-  padding: 0;              /* removes button-like padding */
-  border: none;
+  gap: 18px;
 }
 
-.tenant-link:hover{
-  text-decoration: underline;
-  color: #365173;
+/* Left side: logo */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
 }
 
-.nav-cta:hover{
-  background: #081833;
-  transform: translateY(-1px);
+.nav-brand .logo {
+  height: 80px; /* desktop */
+  width: auto;
+  display: block;
 }
 
+@media (max-width: 768px) {
+  .nav-brand .logo {
+    height: 50px; /* mobile */
+  }
+}
+
+/* Right side: links + actions */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+/* Main nav list */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 22px;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 nav a {
   font-weight: 500;
   position: relative;
+  color: #222;
 }
 
+/* Underline hover */
 nav a::after {
   content: "";
   position: absolute;
   width: 0;
   height: 2px;
-  background: #222; /* visible on white nav */
+  background: #222;
   bottom: -4px;
   left: 0;
   transition: width 0.3s ease;
@@ -159,15 +156,58 @@ nav a::after {
 
 nav a:hover::after { width: 100%; }
 
-/* Logo */
-.logo {
-  height: 70px;
-  width: auto;
-  transition: all 0.3s ease;
+/* Primary CTA button (keep for Work With Us, etc.) */
+.nav-cta {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #0a1e40;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid rgba(10,30,64,0.25);
+  transition: transform .2s ease, background .2s ease;
+  white-space: nowrap;
 }
 
+.nav-cta:hover {
+  background: #081833;
+  transform: translateY(-1px);
+}
+
+/* Tenant Request = subtle link */
+.tenant-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #446389;     /* your brand navy */
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tenant-link:hover {
+  text-decoration: underline;
+  color: #365173;
+}
+
+/* Mobile: prevent "pushing left" by stacking cleanly */
 @media (max-width: 768px) {
-  .logo { height: 50px; }
+  nav { padding: 12px 18px; }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
 }
 
 /* =========================
