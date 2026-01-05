@@ -458,6 +458,26 @@ body.services-page .services.hero-services h1 {
   display: block;
   text-align: left;
 }
+/* =========================
+   ABOUT PAGE – TEAM ALIGNMENT TWEAK
+   ========================= */
+
+/* Center headshot, name, and title */
+.team-member .team-photo,
+.team-member h2,
+.team-member h4 {
+  text-align: center;
+}
+
+/* Keep bios left-aligned for readability */
+.team-member .team-info p {
+  text-align: left;
+}
+
+/* Optional: tighten spacing under title */
+.team-member h4 {
+  margin-bottom: 18px;
+}
 
 .team-photo{ margin-bottom: 14px; }
 
