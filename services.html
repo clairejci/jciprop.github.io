@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | JCI Properties</title>
 
-  <!-- Google Font (match homepage) -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 
 <body class="services-page">
 
-  <!-- NAVIGATION (match homepage structure) -->
+  <!-- NAVIGATION -->
   <nav>
     <div class="nav-container">
 
@@ -31,8 +31,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <!-- Subtle tenant link only (optional on this page) -->
-        <a href="tenant-service-request.html" class="tenant-link">Tenant Service Request</a>
+        <a href="tenant-service-request.html" class="nav-cta">Tenant Service Request</a>
       </div>
 
     </div>
@@ -53,17 +52,19 @@
   <!-- SERVICES CONTENT -->
   <section class="services fade-in">
     <div class="card-section">
-      <h2>Advisory & Brokerage</h2>
+      <h2>Advisory &amp; Brokerage</h2>
       <p>We specialize in strategic industrial and office real estate guidance with a relationship-driven approach.</p>
 
+      <!-- FOR TENANTS (anchor for homepage) -->
+      <h3 id="tenants" class="services-subhead">For Tenants</h3>
+
       <details class="service-item">
-        <summary>Industrial Real Estate</summary>
-        <div style="padding: 18px 26px;">
-          <p style="margin: 0 0 12px; color: #333;">
-            We provide strategic guidance across industrial asset types, helping clients navigate acquisition,
-            disposition, and leasing decisions with confidence.
+        <summary>Industrial Tenant Representation</summary>
+        <div class="service-body">
+          <p>
+            We represent industrial users in site selection, lease negotiations, renewals, and expansions—helping you protect leverage and make clear, informed decisions.
           </p>
-          <ul style="margin: 0; padding-left: 18px;">
+          <ul>
             <li>Warehouse &amp; Distribution Facilities</li>
             <li>Manufacturing Properties</li>
             <li>Logistics &amp; Flex Space</li>
@@ -73,17 +74,49 @@
       </details>
 
       <details class="service-item">
-        <summary>Office Real Estate</summary>
-        <div style="padding: 18px 26px;">
-          <p style="margin: 0 0 12px; color: #333;">
-            We help office users and owners align real estate decisions with operational and financial goals
-            in an evolving workplace environment.
+        <summary>Office Tenant Representation</summary>
+        <div class="service-body">
+          <p>
+            We help office users align real estate decisions with operational and financial goals in an evolving workplace environment.
           </p>
-          <ul style="margin: 0; padding-left: 18px;">
+          <ul>
             <li>Office Leasing &amp; Sales</li>
-            <li>Tenant Representation</li>
-            <li>Landlord Representation</li>
-            <li>Portfolio Strategy &amp; Advisory</li>
+            <li>Renewals, Expansions &amp; Relocations</li>
+            <li>Workplace Strategy Support</li>
+            <li>Portfolio Advisory</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- FOR OWNERS (anchor for homepage) -->
+      <h3 id="owners" class="services-subhead">For Owners</h3>
+
+      <details class="service-item">
+        <summary>Landlord Representation</summary>
+        <div class="service-body">
+          <p>
+            We support owners with leasing strategy, positioning, and execution—working to reduce downtime and strengthen asset performance over time.
+          </p>
+          <ul>
+            <li>Leasing Strategy &amp; Market Positioning</li>
+            <li>Broker Outreach &amp; Tenant Targeting</li>
+            <li>Negotiations &amp; Deal Execution</li>
+            <li>Ongoing Market Updates</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="service-item">
+        <summary>Investment Advisory</summary>
+        <div class="service-body">
+          <p>
+            We provide guidance on acquisition and disposition decisions with a focus on underwriting, strategy, and long-term value.
+          </p>
+          <ul>
+            <li>Acquisition &amp; Disposition Strategy</li>
+            <li>Pricing &amp; Timing Guidance</li>
+            <li>Market Intelligence</li>
+            <li>Value-Add Opportunity Assessment</li>
           </ul>
         </div>
       </details>
@@ -91,8 +124,8 @@
     </div>
   </section>
 
-  <!-- WORK WITH US CTA -->
-  <section class="work-with-us fade-in">
+  <!-- WORK WITH US CTA (match sizing) -->
+  <section class="work-with-us card-section fade-in">
     <h2>Work With Us</h2>
     <p>
       We believe the best results come from trusted relationships and thoughtful strategy.
@@ -102,7 +135,8 @@
   </section>
 
   <footer class="footer fade-in">
-    &copy; 2026 JCI Properties. All rights reserved.
+    <img class="footer-logo" src="images/logo.png" alt="JCI Properties Logo">
+    <p>© 2026 JCI Properties. All rights reserved.</p>
   </footer>
 
 </body>
