@@ -453,6 +453,48 @@ body.services-page .services.hero-services h1 {
 /* =========================
    ABOUT (TEAM STACKED)
    ========================= */
+/* =========================
+   ABOUT PAGE – POLISH
+   ========================= */
+
+/* Center the “identity” area */
+.team-member .team-photo,
+.team-member .team-info h2,
+.team-member .team-info h4{
+  text-align: center;
+}
+
+/* Left-align bios for readability */
+.team-member .team-info p{
+  text-align: left;
+}
+
+/* Optional: make the contact line slightly more “designed” */
+.team-member .team-info p:last-child{
+  margin-top: 14px;
+}
+
+/* Subtle divider between Jordan and Claire */
+.team .team-member + .team-member{
+  position: relative;
+  padding-top: 34px;
+  margin-top: 34px;
+}
+
+.team .team-member + .team-member::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 86%;
+  transform: translateX(-50%);
+  height: 1px;
+  background: linear-gradient(to right,
+    transparent,
+    rgba(0,0,0,0.12),
+    transparent
+  );
+}
 
 .team-member{
   display: block;
