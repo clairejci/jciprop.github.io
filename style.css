@@ -568,6 +568,17 @@ body.services-page .services.hero-services h1 {
   .marquee-track { gap: 32px; animation-duration: 28s; }
   .marquee-track img { height: 28px; }
 }
+.team-member{
+  display: block;
+  text-align: left;
+}
+
+.team-photo{ margin-bottom: 14px; }
+
+.team-photo img{
+  width: 140px;
+  height: 140px;
+}
 
 /* =========================
    FOOTER
