@@ -362,6 +362,26 @@ nav ul a:hover::after { width: 100%; }
   max-width: 900px;
   margin: 0 auto;
 }
+.services-subhead{
+  margin: 28px 0 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.service-body{
+  padding: 18px 26px 22px;
+}
+
+.service-body p{
+  margin: 0 0 12px;
+  color: rgba(34,34,34,0.75);
+}
+
+.service-body ul{
+  margin: 0;
+  padding-left: 18px;
+}
 
 /* Only applies on Services page if you add class on body: services-page */
 body.services-page .services.hero-services {
