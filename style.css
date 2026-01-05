@@ -160,7 +160,7 @@ nav a:hover::after { width: 100%; }
   transform: translateY(-1px);
 }
 
-/* Tenant Request = subtle link */
+/* Tenant Service Request = subtle link */
 .tenant-link {
   font-size: 14px;
   font-weight: 600;
