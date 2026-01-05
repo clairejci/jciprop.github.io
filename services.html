@@ -1,71 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | JCI Properties</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font (match homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="services-page">
 
-  <!-- NAVIGATION -->
+  <!-- NAVIGATION (match homepage structure) -->
   <nav>
     <div class="nav-container">
-      <a href="index.html">
-        <img src="images/logo.png" alt="JCI Properties Logo" class="logo">
+
+      <a class="nav-brand" href="index.html">
+        <img src="images/logo.png" alt="JCI Properties" class="logo">
       </a>
 
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Subtle tenant link only (optional on this page) -->
+        <a href="tenant-service-request.html" class="tenant-link">Tenant Service Request</a>
+      </div>
+
     </div>
   </nav>
 
-  <!-- SERVICES HERO (background image comes from CSS) -->
+  <!-- SERVICES HERO -->
   <section class="services hero-services fade-in">
     <div class="hero-content">
       <h1>Our Services</h1>
       <p>
-        Our services are designed to support clients through every stage of the commercial real estate lifecycle,
+        Our services support clients through every stage of the commercial real estate lifecycle,
         with an emphasis on clarity, responsiveness, and long-term results.
       </p>
       <a href="contact.html" class="cta-button">Work With Us</a>
     </div>
   </section>
 
-  <!-- SERVICES CONTENT + DROPDOWNS -->
+  <!-- SERVICES CONTENT -->
   <section class="services fade-in">
-    <h1>Advisory & Brokerage</h1>
-    <p>We specialize in strategic industrial and office real estate guidance with a relationship-driven approach.</p>
+    <div class="card-section">
+      <h2>Advisory & Brokerage</h2>
+      <p>We specialize in strategic industrial and office real estate guidance with a relationship-driven approach.</p>
 
-    <details class="service-item">
-      <summary>Industrial Real Estate</summary>
-      <ul>
-        <li>We provide strategic guidance across industrial asset types, helping clients navigate acquisition, disposition, and leasing decisions with confidence.</li>
-        <li>Warehouse & Distribution Facilities</li>
-        <li>Manufacturing Properties</li>
-        <li>Logistics & Flex Space</li>
-        <li>Site Selection & Market Analysis</li>
-      </ul>
-    </details>
+      <details class="service-item">
+        <summary>Industrial Real Estate</summary>
+        <div style="padding: 18px 26px;">
+          <p style="margin: 0 0 12px; color: #333;">
+            We provide strategic guidance across industrial asset types, helping clients navigate acquisition,
+            disposition, and leasing decisions with confidence.
+          </p>
+          <ul style="margin: 0; padding-left: 18px;">
+            <li>Warehouse &amp; Distribution Facilities</li>
+            <li>Manufacturing Properties</li>
+            <li>Logistics &amp; Flex Space</li>
+            <li>Site Selection &amp; Market Analysis</li>
+          </ul>
+        </div>
+      </details>
 
-    <details class="service-item">
-      <summary>Office Real Estate</summary>
-      <ul>
-        <li>We help office users and owners align real estate decisions with operational and financial goals in an evolving workplace environment.</li>
-        <li>Office Leasing & Sales</li>
-        <li>Tenant Representation</li>
-        <li>Landlord Representation</li>
-        <li>Portfolio Strategy & Advisory</li>
-      </ul>
-    </details>
+      <details class="service-item">
+        <summary>Office Real Estate</summary>
+        <div style="padding: 18px 26px;">
+          <p style="margin: 0 0 12px; color: #333;">
+            We help office users and owners align real estate decisions with operational and financial goals
+            in an evolving workplace environment.
+          </p>
+          <ul style="margin: 0; padding-left: 18px;">
+            <li>Office Leasing &amp; Sales</li>
+            <li>Tenant Representation</li>
+            <li>Landlord Representation</li>
+            <li>Portfolio Strategy &amp; Advisory</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
   </section>
 
-  <!-- WORK WITH US CTA (consistent sitewide) -->
+  <!-- WORK WITH US CTA -->
   <section class="work-with-us fade-in">
     <h2>Work With Us</h2>
     <p>
