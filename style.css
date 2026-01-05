@@ -715,3 +715,158 @@ body.services-page .services.hero-services h1 {
   margin: 0 auto 10px;
   opacity: 0.95;
 }
+/* =========================
+   MOBILE POLISH PACK
+   ========================= */
+
+@media (max-width: 768px){
+
+  /* 1) NAV: tighten + make tap targets premium */
+  nav { padding: 12px 14px; }
+
+  .nav-brand .logo{ height: 52px; }
+
+  nav ul a,
+  .tenant-link,
+  .nav-cta{
+    padding: 10px 10px;           /* bigger tap targets */
+    border-radius: 10px;
+  }
+
+  /* Keep the CTA from feeling tiny */
+  .nav-cta{
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  /* 2) HERO: reduce height + improve readability */
+  .hero{
+    min-height: 72vh;
+    padding: 0 18px;
+    background-position: center;
+  }
+
+  .hero-content{
+    max-width: 560px;
+  }
+
+  .hero h1{
+    font-size: 2.05rem;
+    line-height: 1.14;
+  }
+
+  .hero p{
+    font-size: 1.02rem;
+    line-height: 1.65;
+  }
+
+  /* 3) Cards: consistent “luxury spacing” on mobile */
+  .card-section,
+  .info-card,
+  .work-with-us{
+    margin: 18px 12px;
+    padding: 26px 18px;
+    border-radius: 16px;
+  }
+
+  /* Reduce the “stacked” feeling between cards */
+  .card-section + .card-section{
+    margin-top: 16px;
+  }
+
+  /* 4) Buttons: full-width option reads premium on mobile */
+  .cta-button{
+    width: 100%;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 12px;
+  }
+
+  /* 5) Audience cards: more breathable + clear hierarchy */
+  .audience h2{
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+  }
+
+  .audience-card{
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+
+  .audience-card p{
+    margin-bottom: 12px;
+    font-size: 0.98rem;
+  }
+
+  /* 6) Services page: reduce “empty space” + better text scale */
+  .services{
+    padding: 48px 16px;
+  }
+
+  body.services-page .services.hero-services{
+    height: 70vh;
+    padding: 0 18px;
+  }
+
+  /* 7) About page: ensure headshots + titles feel intentional */
+  .team-photo img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .team-info h2{
+    font-size: 1.4rem;
+  }
+
+  .team-info h4{
+    font-size: 0.98rem;
+  }
+
+  /* 8) Contact + forms: full width submit + comfy inputs */
+  .contact{
+    margin: 18px 12px;
+    padding: 26px 18px;
+    border-radius: 16px;
+  }
+
+  .contact input,
+  .contact textarea,
+  .contact select{
+    padding: 14px 14px;
+    font-size: 16px; /* prevents iOS zoom */
+    border-radius: 12px;
+  }
+
+  .contact button{
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  /* 9) Marquee: keep it elegant and not too tall */
+  .client-marquee{
+    margin: 22px 12px 8px;
+    padding: 10px 10px 6px;
+  }
+
+  .marquee-track img{
+    height: 26px;
+  }
+
+  /* 10) Footer: keep it tight */
+  .footer{
+    margin-top: 36px;
+    padding: 22px 14px;
+  }
+
+  .footer-logo{
+    height: 38px;
+  }
+}
+html { scroll-behavior: smooth; }
+:target { scroll-margin-top: 90px; }
+
+@media (prefers-reduced-motion: reduce){
+  .fade-in{ animation: none; opacity: 1; }
+}
+
