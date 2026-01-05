@@ -458,6 +458,20 @@ body.services-page .services.hero-services h1 {
   display: block;
   text-align: left;
 }
+.team .team-member + .team-member::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 86%;
+  transform: translateX(-50%);
+  height: 1px;
+  background: linear-gradient(to right,
+    transparent,
+    rgba(0,0,0,0.12),
+    transparent
+  );
+}
 /* =========================
    ABOUT PAGE – TEAM ALIGNMENT TWEAK
    ========================= */
@@ -641,6 +655,10 @@ body.services-page .services.hero-services h1 {
 @media (max-width: 768px) {
   .marquee-track { gap: 32px; animation-duration: 28s; }
   .marquee-track img { height: 28px; }
+}
+.marquee{
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 /* =========================
