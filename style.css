@@ -513,6 +513,14 @@ body.services-page .services.hero-services h1 {
 }
 .contact h1 { text-align: center; }
 
+.contact label{
+  display: block;
+  margin-top: 4px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+
 /* =========================
    FADE-IN ANIMATION
    ========================= */
