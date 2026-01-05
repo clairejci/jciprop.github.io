@@ -346,6 +346,9 @@ body.services-page .services.hero-services h1 {
   padding: 18px 34px 22px;
   margin: 0;
 }
+.service-item div p { font-size: 1rem; line-height: 1.6; }
+.service-item div ul li { margin: 8px 0; }
+
 .service-item li { color: #333; } /* FIX: readable on light background */
 
 /* =========================
