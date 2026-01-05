@@ -1,3 +1,16 @@
+/* ============================
+   BRAND TOKENS
+   ============================ */
+
+:root{
+  --brand-navy: #0a1e40;     /* background navy */
+  --brand-link: #446389;     /* your brand link navy */
+  --white: #ffffff;
+  --text: #222;
+  --muted: #555;
+  --border: rgba(0,0,0,0.10);
+  --shadow: 0 10px 30px rgba(0,0,0,0.10);
+}
 
 /* ============================
    LOGO INTRO ANIMATION
@@ -5,10 +18,7 @@
 
 #logo-intro {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -17,14 +27,14 @@
 }
 
 #logo-intro img {
-  width: 360px;              /* bigger */
-  animation: logoFade 2.2s ease forwards;  /* longer */
+  width: 360px;
+  animation: logoFade 2.2s ease forwards;
 }
 
 @keyframes logoFade {
   0%   { opacity: 0; transform: scale(0.85); }
   18%  { opacity: 1; transform: scale(1.06); }
-  70%  { opacity: 1; transform: scale(1.00); } /* HOLD longer here */
+  70%  { opacity: 1; transform: scale(1.00); }
   100% { opacity: 0; transform: scale(1.00); }
 }
 
@@ -41,27 +51,20 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  color: #222;
+  color: var(--text);
   line-height: 1.6;
-  background-color: #0a1e40; /* navy brand background */
+  background-color: var(--brand-navy);
+  text-align: left;
 }
-body { text-align: left; }
 
-/* Make all images responsive */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-a {
-  text-decoration: none;
-  color: #222;
-}
+a { text-decoration: none; }
 
-a:hover { color: #555; }
-
-/* Utility container (optional but helpful) */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -73,9 +76,9 @@ a:hover { color: #555; }
    ========================= */
 
 nav {
-  background: #ffffff;
+  background: var(--white);
   border-bottom: 1px solid #eee;
-  padding: 15px 30px;
+  padding: 14px 26px;
 }
 
 .nav-container {
@@ -85,7 +88,7 @@ nav {
   gap: 18px;
 }
 
-/* Left side: logo */
+/* Logo */
 .nav-brand {
   display: flex;
   align-items: center;
@@ -93,105 +96,81 @@ nav {
 }
 
 .nav-brand .logo {
-  height: 80px; /* desktop */
+  height: 70px;
   width: auto;
-  display: block;
 }
 
-@media (max-width: 768px) {
-  .nav-brand .logo {
-    height: 50px; /* mobile */
-  }
-}
-
-/* Right side: links + actions */
+/* Right side */
 .nav-right {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 18px;
   flex: 1 1 auto;
-  justify-content: flex-end;
 }
 
-/* Main nav list */
+/* Menu links */
 nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 22px;
   margin: 0;
   padding: 0;
-  align-items: center;
 }
 
-nav a {
+nav ul a{
+  color: var(--text);
   font-weight: 500;
   position: relative;
-  color: #222;
 }
 
-/* Underline hover */
-nav a::after {
+/* underline hover */
+nav ul a::after {
   content: "";
   position: absolute;
   width: 0;
   height: 2px;
-  background: #222;
+  background: var(--text);
   bottom: -4px;
   left: 0;
-  transition: width 0.3s ease;
+  transition: width 0.25s ease;
 }
+nav ul a:hover::after { width: 100%; }
 
-nav a:hover::after { width: 100%; }
-
-/* Primary CTA button (keep for Work With Us, etc.) */
-.nav-cta {
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: #0a1e40;
-  color: #fff;
-  font-weight: 600;
-  border: 1px solid rgba(10,30,64,0.25);
-  transition: transform .2s ease, background .2s ease;
-  white-space: nowrap;
-}
-
-.nav-cta:hover {
-  background: #081833;
-  transform: translateY(-1px);
-}
-
-/* Tenant Service Request = subtle link */
-.tenant-link {
+/* Tenant link = subtle */
+.tenant-link{
   font-size: 14px;
   font-weight: 600;
-  color: #446389;     /* your brand navy */
-  text-decoration: none;
+  color: var(--brand-link);
   white-space: nowrap;
 }
 
-.tenant-link:hover {
+.tenant-link:hover{
   text-decoration: underline;
   color: #365173;
 }
 
-/* Mobile: prevent "pushing left" by stacking cleanly */
+/* Mobile nav: stack so nothing pushes left */
 @media (max-width: 768px) {
-  nav { padding: 12px 18px; }
+  nav { padding: 12px 16px; }
 
-  .nav-container {
+  .nav-container{
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
 
-  .nav-right {
+  .nav-brand .logo{ height: 52px; }
+
+  .nav-right{
     width: 100%;
     justify-content: space-between;
-    gap: 12px;
     flex-wrap: wrap;
+    gap: 12px;
   }
 
-  nav ul {
+  nav ul{
     flex-wrap: wrap;
     gap: 14px;
   }
@@ -215,48 +194,103 @@ nav a:hover::after { width: 100%; }
   background-position: center;
   background-repeat: no-repeat;
 
-  color: #ffffff;
+  color: var(--white);
 }
 
 .hero-content {
-  max-width: 650px;
-  position: relative;
-  z-index: 2;
+  max-width: 680px;
 }
-.hero .cta-button { 
-  margin-top: 18px; 
+
+.hero h1{
+  margin: 0 0 14px;
+  font-size: 3rem;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.hero p{
+  margin: 0 0 18px;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.92);
+}
+
+@media (max-width: 768px){
+  .hero{
+    padding: 0 22px;
+    min-height: 75vh;
+  }
+  .hero h1{ font-size: 2.2rem; }
+  .hero p{ font-size: 1.05rem; }
 }
 
 /* =========================
-   CTA BUTTON
+   CTA BUTTON (used in hero + sections)
    ========================= */
 
 .cta-button {
   display: inline-block;
   padding: 14px 28px;
-  background-color: #ffffff;
-  color: #222;
+  background-color: var(--white);
+  color: var(--text);
   font-weight: 600;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .cta-button:hover {
   background-color: #f1f1f1;
+  transform: translateY(-1px);
 }
 
 /* =========================
-   SERVICES PAGE
+   WHITE CARD SECTIONS (HOME + GENERAL)
    ========================= */
 
-/* Base services section spacing (all pages that use .services) */
-.services {
+.card-section,
+.info-card,
+.work-with-us{
+  max-width: 980px;
+  margin: 36px auto;
+  padding: 44px 40px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.card-section h2,
+.work-with-us h2{
+  margin-top: 0;
+  color: var(--text);
+}
+
+.card-section p,
+.work-with-us p{
+  color: #444;
+}
+
+/* Fix lists inside white cards */
+.card-section ul{
+  margin: 18px 0 0;
+  padding-left: 20px;
+  color: #444;
+}
+.card-section li{
+  margin: 10px 0;
+  color: #444;
+}
+
+/* =========================
+   SERVICES PAGE HERO (if used)
+   ========================= */
+
+.services{
   padding: 70px 20px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Services hero background ONLY on Services page */
+/* Only applies on Services page if you add class on body: services-page */
 body.services-page .services.hero-services {
   height: 85vh;
   max-width: none;
@@ -265,45 +299,21 @@ body.services-page .services.hero-services {
   display: flex;
   align-items: center;
   color: #fff;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-              url("images/industrial-building.jpg") center / cover no-repeat;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/industrial-building.jpg") center / cover no-repeat;
 }
 
-.services h1 {
-  text-align: center;
-  font-weight: 600;
-}
-
-.services p {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 40px;
-}
-
-/* If your Services page hero text needs white */
 body.services-page .services.hero-services p,
 body.services-page .services.hero-services h1 {
   color: #fff;
 }
-.card-section{
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 44px 34px;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
-}
 
-/* =========================
-   SERVICES DROPDOWNS (FIXED CONTRAST)
-   ========================= */
-
+/* Dropdown service items */
 .service-item {
   margin-bottom: 20px;
   border-radius: 12px;
   background: #f5f5f5;
-  padding: 0;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
@@ -316,142 +326,27 @@ body.services-page .services.hero-services h1 {
   list-style: none;
   cursor: pointer;
   padding: 22px 26px;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: #222;
   background: #ffffff;
   border-bottom: 1px solid #e5e5e5;
-  transition: background 0.3s ease;
 }
 
-.service-item summary:hover { background: #f0f0f0; }
-
-.service-item[open] summary { background: #f9f9f9; }
-
-.service-item ul {
-  padding: 20px 40px 25px;
-  margin: 0;
-}
-
-.service-item li {
-  margin-bottom: 12px;
-  color: #fff;
-}
-
-/* Remove default arrow in Chrome/Safari */
 .service-item summary::-webkit-details-marker { display: none; }
 
-/* + / – indicator */
 .service-item summary::after {
   content: "+";
   float: right;
   font-size: 1.5rem;
 }
-
 .service-item[open] summary::after { content: "–"; }
 
-/* =========================
-   ABOUT US (CENTERED + RICH)
-   ========================= */
-
-/* White “cards” on top of the navy background */
-.about-hero {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 44px 34px;
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
-  text-align: center;
+.service-item ul {
+  padding: 18px 34px 22px;
+  margin: 0;
 }
-
-.about-hero h1 {
-  font-size: 2.8rem;
-  margin: 0 0 15px;
-  font-weight: 600;
-}
-
-.about-intro {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: #444;
-  margin: 0 auto;
-  max-width: 780px;
-}
-
-/* Team list */
-.team {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  margin: 50px auto;
-  max-width: 900px;
-}
-
-/* Team member “card” */
-.team-member {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 26px;
-  border-radius: 12px;
-  background: #fafafa;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease;
-}
-
-.team-member:hover {
-  transform: translateY(-4px);
-}
-
-/* Photo column: fixed size so it never gets squeezed */
-.team-photo {
-  width: 200px;
-  height: 200px;
-  flex: 0 0 200px;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 4px solid #ffffff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
-/* Headshot image fills the circle without distortion */
-.team-photo .headshot {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
-  display: block;
-}
-
-/* Accent ring on hover */
-.team-member:hover .team-photo {
-  border-color: #b08d57;
-  box-shadow: 0 8px 22px rgba(176,141,87,0.35);
-}
-
-.team-info h2 {
-  font-size: 1.75rem;
-  margin: 0 0 6px;
-}
-
-.team-info h4 {
-  font-size: 1.05rem;
-  color: #666;
-  margin: 0 0 14px;
-  font-weight: 500;
-}
-
-.team-info p {
-  color: #444;
-  line-height: 1.65;
-  margin: 0 0 10px;
-}
-
-/* If Claire’s photo needs slightly higher crop */
-.headshot--claire { object-position: center 15%; }
+.service-item li { color: #333; } /* FIX: readable on light background */
 
 /* =========================
    CONTACT PAGE
@@ -462,10 +357,10 @@ body.services-page .services.hero-services h1 {
   max-width: 700px;
   margin: 50px auto;
   text-align: center;
-  background: #ffffff;
+  background: var(--white);
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  box-shadow: var(--shadow);
 }
 
 .contact form {
@@ -477,58 +372,41 @@ body.services-page .services.hero-services h1 {
 }
 
 .contact input,
-.contact textarea {
+.contact textarea,
+.contact select {
   padding: 14px 16px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
-  transition: all 0.3s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   width: 100%;
 }
 
 .contact input:focus,
-.contact textarea:focus {
+.contact textarea:focus,
+.contact select:focus {
   outline: none;
-  border-color: #222;
+  border-color: var(--brand-link);
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 .contact button {
   align-self: flex-start;
   padding: 14px 28px;
-  background-color: #222;
+  background-color: var(--text);
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.contact button:hover { background-color: #555; }
-
-/* =========================
-   WORK WITH US CTA (ALL PAGES)
-   ========================= */
-
-.work-with-us {
-  background: #ffffff;
-  padding: 60px 20px;
-  text-align: center;
-  max-width: 900px;
-  margin: 50px auto;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
-}
-
-.work-with-us h2 { margin: 0 0 10px; }
-
-.work-with-us p {
-  color: #444;
-  margin: 0 0 25px;
+.contact button:hover {
+  background-color: #333;
+  transform: translateY(-1px);
 }
 
 /* =========================
@@ -546,17 +424,6 @@ body.services-page .services.hero-services h1 {
 }
 
 /* =========================
-   FOOTER
-   ========================= */
-
-.footer {
-  padding: 30px 20px;
-  text-align: center;
-  color: rgba(255,255,255,0.75); /* readable on navy */
-  border-top: 1px solid rgba(255,255,255,0.15);
-  margin-top: 60px;
-}
-/* =========================
    CLIENT LOGO MARQUEE (HOME)
    ========================= */
 
@@ -564,7 +431,7 @@ body.services-page .services.hero-services h1 {
   max-width: 1100px;
   margin: 35px auto 10px;
   padding: 18px 20px 10px;
-  color: rgba(255,255,255,0.92); /* readable on navy */
+  color: rgba(255,255,255,0.92);
 }
 
 .client-marquee h2 {
@@ -576,16 +443,13 @@ body.services-page .services.hero-services h1 {
   color: rgba(255,255,255,0.75);
 }
 
-/* The “window” */
 .marquee {
   overflow: hidden;
   border-top: 1px solid rgba(255,255,255,0.15);
   border-bottom: 1px solid rgba(255,255,255,0.15);
   padding: 16px 0;
-  position: relative;
 }
 
-/* The moving track */
 .marquee-track {
   display: flex;
   align-items: center;
@@ -594,7 +458,6 @@ body.services-page .services.hero-services h1 {
   animation: marqueeScroll 35s linear infinite;
 }
 
-/* Logos */
 .marquee-track img {
   height: 34px;
   width: auto;
@@ -609,87 +472,28 @@ body.services-page .services.hero-services h1 {
   transform: translateY(-1px);
 }
 
-/* Smooth infinite scroll */
 @keyframes marqueeScroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 
-/* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
 }
 
-/* Mobile tuning */
 @media (max-width: 768px) {
   .marquee-track { gap: 32px; animation-duration: 28s; }
   .marquee-track img { height: 28px; }
 }
 
 /* =========================
-   MOBILE POLISH
+   FOOTER
    ========================= */
 
-@media (max-width: 768px) {
-
-  nav { padding: 12px 18px; }
-
-  nav ul { gap: 16px; }
-
-  nav a { padding: 10px 0; display: inline-block; }
-
-  .hero {
-    padding: 0 22px;
-    height: 75vh;
-  }
-
-  .hero h1 { font-size: 2.2rem; }
-
-  .hero p { font-size: 1.05rem; }
-
-  /* About containers */
-  .about-hero,
-  .team-container,
-  .contact,
-  .work-with-us {
-    padding: 34px 18px;
-    margin: 30px 14px;
-  }
-
-  /* Team cards stack */
-  .team-member {
-    flex-direction: column;
-    text-align: center;
-    gap: 18px;
-  }
-
-  .team-photo img {
-    width: 160px;
-    height: 160px;
-  }
-
-  .contact form { text-align: left; }
-
-  .contact button { align-self: stretch; text-align: center; }
+.footer {
+  padding: 30px 20px;
+  text-align: center;
+  color: rgba(255,255,255,0.75);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 60px;
 }
-
-.hero{
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-/* White “bubble” cards for homepage sections */
-.info-card{
-  max-width: 980px;
-  margin: 36px auto;
-  padding: 44px 40px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.info-card h2{
-  margin-top: 0;
-}
-
-
