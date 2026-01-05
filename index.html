@@ -16,65 +16,90 @@
 
 <body>
 
-  <!-- LOGO INTRO ANIMATION (must be inside body) -->
+  <!-- LOGO INTRO ANIMATION -->
   <div id="logo-intro">
     <img src="images/logo.png" alt="JCI Properties Logo">
   </div>
 
   <!-- NAVIGATION -->
   <nav>
-  <div class="nav-container">
+    <div class="nav-container">
 
-    <!-- LEFT: LOGO -->
-    <a class="nav-brand" href="index.html">
-      <img src="images/logo.png" alt="JCI Properties" class="logo">
-    </a>
+      <!-- LEFT: LOGO -->
+      <a class="nav-brand" href="index.html">
+        <img src="images/logo.png" alt="JCI Properties" class="logo">
+      </a>
 
-    <!-- RIGHT: NAV LINKS + ACTIONS -->
-    <div class="nav-right">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <!-- RIGHT: NAV LINKS + ACTIONS -->
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-      <!-- Subtle tenant link -->
-      <a href="tenant-service-request.html" class="tenant-link">Tenant Service Request</a>
+        <!-- Tenant Service Request (top-right action) -->
+        <a href="tenant-service-request.html" class="nav-cta">Tenant Service Request</a>
+      </div>
+
     </div>
-
-  </div>
-</nav>
+  </nav>
 
   <!-- HERO SECTION -->
   <section class="hero fade-in">
-  <div class="hero-content">
-    <h1>Strategic Industrial & Office Real Estate, Built on Trust</h1>
-    <p>
-      JCI Properties is a relationship-driven commercial real estate advisory firm specializing in industrial and office assets. We partner closely with owners, tenants, and investors to deliver clear guidance, informed strategy, and confident execution.
-    </p>
-    <a href="contact.html" class="cta-button">Work With Us</a>
-  </div>
-</section>
+    <div class="hero-content">
+      <h1>Strategic Industrial & Office Real Estate, Built on Trust</h1>
+      <p>
+        JCI Properties is a relationship-driven commercial real estate advisory firm specializing in industrial and office assets. We partner closely with owners, tenants, and investors to deliver clear guidance, informed strategy, and confident execution.
+      </p>
+      <a href="contact.html" class="cta-button">Work With Us</a>
+    </div>
+  </section>
+
+  <!-- FOR TENANTS / FOR OWNERS -->
+  <section class="audience card-section fade-in">
+    <h2>For Tenants & Owners</h2>
+    <div class="audience-grid">
+      <a class="audience-card" href="services.html#tenants">
+        <h3>For Tenants</h3>
+        <p>
+          Tenant representation and advisory support designed to protect leverage, streamline decisions,
+          and align space with operational goals.
+        </p>
+        <span class="audience-link">Explore tenant services →</span>
+      </a>
+
+      <a class="audience-card" href="services.html#owners">
+        <h3>For Owners</h3>
+        <p>
+          Leasing strategy, landlord representation, and market positioning to reduce downtime and elevate
+          asset performance over time.
+        </p>
+        <span class="audience-link">Explore owner services →</span>
+      </a>
+    </div>
+  </section>
 
   <!-- VALUE SECTION -->
-<section class="services card-section fade-in">
-  <h2>What Clients Value</h2>
-  <ul>
-    <li>Clear, strategic guidance</li>
-    <li>Market-driven decision making</li>
-    <li>Long-term relationship focus</li>
-    <li>Responsive, hands-on service</li>
-  </ul>
-</section>
+  <section class="services card-section fade-in">
+    <h2>What Clients Value</h2>
+    <ul>
+      <li>Clear, strategic guidance</li>
+      <li>Market-driven decision making</li>
+      <li>Long-term relationship focus</li>
+      <li>Responsive, hands-on service</li>
+    </ul>
+  </section>
 
   <!-- WHAT WE DO -->
-<section class="services card-section fade-in">
-  <h2>What We Do</h2>
-  <p>
-    We advise clients through complex commercial real estate decisions with a disciplined, market-driven approach. Our focus is long-term value, thoughtful strategy, and partnerships built on trust.
-  </p>
-</section>
+  <section class="services card-section fade-in">
+    <h2>What We Do</h2>
+    <p>
+      We advise clients through complex commercial real estate decisions with a disciplined, market-driven approach.
+      Our focus is long-term value, thoughtful strategy, and partnerships built on trust.
+    </p>
+  </section>
 
   <!-- WORK WITH US CTA -->
   <section class="work-with-us card-section fade-in">
@@ -86,46 +111,48 @@
     <a href="contact.html" class="cta-button">Contact Us</a>
   </section>
 
-  <!-- FOOTER (must be inside body) -->
+  <!-- CLIENT MARQUEE -->
   <section class="client-marquee fade-in" aria-label="Clients we have worked with">
-  <h2>Clients We’ve Worked With</h2>
+    <h2>Clients We’ve Worked With</h2>
 
-  <div class="marquee" role="region" aria-label="Client logos scrolling">
-    <div class="marquee-track">
-      <!-- Set A -->
-      <img src="images/logos/tesla.svg" alt="Tesla">
-      <img src="images/logos/amazon.jpg" alt="Amazon">
-      <img src="images/logos/fsg.svg" alt="FSG">
-      <img src="images/logos/university-of-texas.svg" alt="University of Texas">
-      <img src="images/logos/state-of-texas.svg" alt="State of Texas">
-      <img src="images/logos/pci.svg" alt="PCI">
-      <img src="images/logos/continental-automotive-group.svg" alt="Continental Automotive Group">
-      <img src="images/logos/lifted-trucks.svg" alt="Lifted Trucks">
-      <img src="images/logos/thomas-printworks.svg" alt="Thomas Printworks">
-      <img src="images/logos/fema.svg" alt="FEMA">
-      <img src="images/logos/ledcor.svg" alt="Ledcor">
+    <div class="marquee" role="region" aria-label="Client logos scrolling">
+      <div class="marquee-track">
+        <!-- Set A -->
+        <img src="images/logos/tesla.jpg" alt="Tesla">
+        <img src="images/logos/amazon.jpg" alt="Amazon">
+        <img src="images/logos/fsg.jpg" alt="FSG">
+        <img src="images/logos/university-of-texas.jpg" alt="University of Texas">
+        <img src="images/logos/state-of-texas.jpg" alt="State of Texas">
+        <img src="images/logos/pci.jpg" alt="PCI">
+        <img src="images/logos/continental-automotive-group.jpg" alt="Continental Automotive Group">
+        <img src="images/logos/lifted-trucks.jpg" alt="Lifted Trucks">
+        <img src="images/logos/thomas-printworks.jpg" alt="Thomas Printworks">
+        <img src="images/logos/fema.jpg" alt="FEMA">
+        <img src="images/logos/ledcor.jpg" alt="Ledcor">
 
-      <!-- Set B (duplicate for seamless loop) -->
-      <img src="images/logos/tesla.svg" alt="Tesla">
-      <img src="images/logos/amazon.svg" alt="Amazon">
-      <img src="images/logos/fsg.svg" alt="FSG">
-      <img src="images/logos/university-of-texas.svg" alt="University of Texas">
-      <img src="images/logos/state-of-texas.svg" alt="State of Texas">
-      <img src="images/logos/pci.svg" alt="PCI">
-      <img src="images/logos/continental-automotive-group.svg" alt="Continental Automotive Group">
-      <img src="images/logos/lifted-trucks.svg" alt="Lifted Trucks">
-      <img src="images/logos/thomas-printworks.svg" alt="Thomas Printworks">
-      <img src="images/logos/fema.svg" alt="FEMA">
-      <img src="images/logos/ledcor.svg" alt="Ledcor">
+        <!-- Set B (duplicate for seamless loop) -->
+        <img src="images/logos/tesla.jpg" alt="Tesla">
+        <img src="images/logos/amazon.jpg" alt="Amazon">
+        <img src="images/logos/fsg.jpg" alt="FSG">
+        <img src="images/logos/university-of-texas.jpg" alt="University of Texas">
+        <img src="images/logos/state-of-texas.jpg" alt="State of Texas">
+        <img src="images/logos/pci.jpg" alt="PCI">
+        <img src="images/logos/continental-automotive-group.jpg" alt="Continental Automotive Group">
+        <img src="images/logos/lifted-trucks.jpg" alt="Lifted Trucks">
+        <img src="images/logos/thomas-printworks.jpg" alt="Thomas Printworks">
+        <img src="images/logos/fema.jpg" alt="FEMA">
+        <img src="images/logos/ledcor.jpg" alt="Ledcor">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
+    <img class="footer-logo" src="images/logo.png" alt="JCI Properties Logo">
     <p>© 2026 JCI Properties. All rights reserved.</p>
   </footer>
 
-  <!-- INTRO SCRIPT (only one, placed at end of body) -->
+  <!-- INTRO SCRIPT (first visit per session) -->
   <script>
     (function () {
       const intro = document.getElementById("logo-intro");
@@ -140,7 +167,7 @@
 
       setTimeout(function () {
         intro.style.display = "none";
-      }, 2200); // match CSS animation duration
+      }, 2200);
     })();
   </script>
 
