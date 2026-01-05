@@ -106,6 +106,27 @@ nav {
   border: 1px solid rgba(10,30,64,0.25);
   transition: transform .2s ease, background .2s ease;
 }
+.nav-cta{
+  ...
+}
+.nav-cta:hover{
+  ...
+}
+/* Tenant Request link (subtle, not button-like) */
+.tenant-link{
+  margin-left: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #446389;          /* your brand navy */
+  background: transparent; /* ensures it doesn't look like a button */
+  padding: 0;              /* removes button-like padding */
+  border: none;
+}
+
+.tenant-link:hover{
+  text-decoration: underline;
+  color: #365173;
+}
 
 .nav-cta:hover{
   background: #081833;
