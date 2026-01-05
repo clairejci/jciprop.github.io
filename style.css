@@ -45,6 +45,7 @@ body {
   line-height: 1.6;
   background-color: #0a1e40; /* navy brand background */
 }
+body { text-align: left; }
 
 /* Make all images responsive */
 img {
@@ -159,6 +160,9 @@ nav a:hover::after { width: 100%; }
   position: relative;
   z-index: 2;
 }
+.hero .cta-button { 
+  margin-top: 18px; 
+}
 
 /* =========================
    CTA BUTTON
@@ -209,7 +213,7 @@ body.services-page .services.hero-services {
 
 .services p {
   text-align: center;
-  color: #444;
+  color: #fff;
   margin-bottom: 40px;
 }
 
@@ -217,6 +221,15 @@ body.services-page .services.hero-services {
 body.services-page .services.hero-services p,
 body.services-page .services.hero-services h1 {
   color: #fff;
+}
+.card-section{
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 44px 34px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
 }
 
 /* =========================
