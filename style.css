@@ -66,6 +66,19 @@ a:hover { color: #555; }
   margin: 0 auto;
   padding: 0 20px;
 }
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+}
+.site-header .logo {
+  height: 80px;
+}
+@media (max-width: 768px) {
+  .site-header .logo {
+    height: 50px;
+  }
+}
 
 /* =========================
    NAVIGATION
@@ -246,7 +259,7 @@ body.services-page .services.hero-services h1 {
 
 .service-item li {
   margin-bottom: 12px;
-  color: #444;
+  color: #fff;
 }
 
 /* Remove default arrow in Chrome/Safari */
